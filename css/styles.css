@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,900;1,100;1,300;1,400;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+:root {
+  --clr-primary-white: hsl(274deg, 15%, 85%);
+  --clr-primary-light: hsl(274deg, 20%, 75%);
+  --clr-primary-mid: hsl(274deg, 25%, 40%);
+  --clr-primary-dark: hsl(274deg, 10%, 15%);
+  --clr-primary-black: hsl(274deg, 5%, 10%);
+  --clr-accent-white: hsl(30deg, 50%, 85%);
+  --clr-accent-light: hsl(25deg, 40%, 65%);
+  --clr-accent-mid: hsl(20deg, 30%, 45%);
+  --clr-accent-dark: hsl(20deg, 20%, 30%);
+  --clr-accent-black: hsl(20deg, 10%, 10%);
+  --clr-neutral-white: hsl(0deg, 0%, 90%);
+  --clr-neutral-light: hsl(0deg, 0%, 75%);
+  --clr-neutral-mid: hsl(0deg, 0%, 50%);
+  --clr-neutral-dark: hsl(0deg, 0%, 25%);
+  --clr-neutral-black: hsl(0deg, 0%, 10%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--clr-primary-black);
+}
+
+nav {
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: var(--clr-primary-dark);
+  text-decoration: none;
+  list-style: none;
+  color: whitesmoke;
+}
+nav ul {
+  display: flex;
+  width: 100%;
+  padding: 0 4rem;
+  justify-content: center;
+}
+nav ul li {
+  position: relative;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+nav ul li:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+nav ul a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+nav ul a::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  height: 50%;
+  border-left: 1px solid whitesmoke;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid whitesmoke;
+  animation: grow 0.5s ease-out;
+}
+
+.home {
+  min-height: 100vh;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home img:not(.zoom) {
+  width: auto;
+  height: 65vh;
+  box-shadow: var(--clr-accent-light) 0 0 12rem;
+  transition: 0.3s ease-out;
+}
+.home img:not(.zoom):hover {
+  transform: rotate(5deg);
+  cursor: zoom-in;
+}
+.home h1 {
+  padding: 4rem;
+  font-family: "Permanent Marker", cursive;
+  font-size: 2.5rem;
+  color: var(--clr-neutral-white);
+  text-shadow: var(--clr-accent-mid) 0 0 3rem;
+  -webkit-text-stroke: 1px var(--clr-accent-black);
+}
+
+.zoom {
+  z-index: 25;
+  position: fixed;
+  height: 90vh;
+  top: 5%;
+  cursor: zoom-out;
+}
+
+#dimmer {
+  z-index: 20;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: #000;
+  opacity: 0.5;
+  cursor: zoom-out;
+}
+
+.dimmer-hidden {
+  display: none;
+}
+
+.slideshow {
+  display: flex;
+  width: 600vw;
+  height: 100vh;
+  animation: slide 60s infinite;
+}
+
+.card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  text-decoration: none;
+  width: 100vw;
+  height: 100vh;
+}
+.card .card-text {
+  text-align: right;
+  color: whitesmoke;
+  padding: 32.5vh 20vw;
+  animation: pulse 5s infinite alternate;
+}
+.card .card-text .card-header {
+  font-weight: 900;
+  font-style: italic;
+  font-size: 3.5rem;
+  text-shadow: #000 0.75rem 0.75rem 0.5rem;
+  padding: 1rem;
+  transform: translate(1rem, 1rem);
+  pointer-events: none;
+}
+.card .card-text .card-social {
+  font-weight: 400;
+  color: whitesmoke;
+}
+.card .card-text .card-social:hover {
+  text-decoration: none;
+  color: var(--clr-accent-light);
+}
+.card .card-overlay {
+  z-index: -1;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(112.5deg, rgba(0, 0, 0, 0) 0%, hsla(274deg, 5%, 10%, 0.8) 70%);
+  animation: fade 5s infinite alternate;
+}
+.card .card-img {
+  z-index: -2;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  animation: fade 5s infinite alternate;
+}
+
+.event {
+  padding: 7rem 0 0 0;
+  top: 0;
+  background-color: var(--clr-primary-black);
+  color: whitesmoke;
+  text-align: center;
+}
+.event .event-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.event .event-text .event-header {
+  font-family: "Rock Salt", cursive;
+  pointer-events: none;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 0.5em 0.25em;
+}
+.event .event-text .event-header h1 {
+  padding: 0 2em;
+  font-size: 4em;
+  font-style: italic;
+}
+.event .event-text .event-header p {
+  transform: translateY(-4.5em);
+  font-weight: bold;
+  padding: 2em;
+}
+.event .event-text .event-body {
+  border: 5px double whitesmoke;
+  box-shadow: rgba(234, 224, 255, 0.3) 0 0 5.5em;
+  padding: 2em 5em;
+  transform: translateY(-3em);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.event .event-text .event-body .event-info {
+  margin: 1em;
+}
+.event .event-text .event-body .event-info h2 {
+  font-family: "Rock Salt", cursive;
+  font-size: 1.5em;
+  font-style: italic;
+}
+.event .event-text .event-body .event-info p {
+  font-size: 1.25em;
+}
+.event .event-text .event-footer {
+  font-family: "Rock Salt", cursive;
+  text-decoration: underline;
+  pointer-events: none;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 0.5em 0.25em;
+  padding: 2em 2em 7em 2em;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.section-loader div {
+  position: fixed;
+  top: 0;
+  transform: translateX(100vw);
+  width: 150vw;
+  height: 100vh;
+  clip-path: polygon(10% 0%, 100% 0, 90% 100%, 0% 100%);
+}
+.section-loader :nth-child(1) {
+  background-image: url(../img/Icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--clr-primary-mid);
+}
+.section-loader .play-anim {
+  z-index: 9;
+  animation: load 3s;
+  animation-timing-function: cubic-bezier(0, 0.95, 1, 0.05);
+}
+
+@keyframes grow {
+  0% {
+    width: 0%;
+    left: 50%;
+  }
+  100% {
+    width: 100%;
+    left: 0%;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 0%;
+  }
+  5% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 95%;
+  }
+  80% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0%;
+  }
+  20% {
+    opacity: 0%;
+  }
+  40% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(0);
+  }
+  18% {
+    transform: translateX(-100vw);
+  }
+  32% {
+    transform: translateX(-100vw);
+  }
+  35% {
+    transform: translateX(-200vw);
+  }
+  49% {
+    transform: translateX(-200vw);
+  }
+  52% {
+    transform: translateX(-300vw);
+  }
+  65% {
+    transform: translateX(-300vw);
+  }
+  68% {
+    transform: translateX(-400vw);
+  }
+  82% {
+    transform: translateX(-400vw);
+  }
+  85% {
+    transform: translateX(-500vw);
+  }
+  99% {
+    transform: translateX(-500vw);
+  }
+  100% {
+    transform: translateX(-500vw);
+  }
+}
+@keyframes load {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-150vw);
+  }
+}

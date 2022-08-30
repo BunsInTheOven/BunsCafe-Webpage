@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Buns in the Oven Café</title>
+</head>
+<body>
+    <div id="dimmer" class="dimmer-hidden" onclick="zoomImage(null)"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul id="nav">
+            <li id="nav-home" class="active">Home</li>
+            <li id="nav-bards">Bards</li>
+            <li id="nav-events">Event</li>
+            <a href="https://discord.com/invite/HSa6unCSmH" target="_blank" rel="noopener noreferrer"><li id="nav-discord">Discord</li></a>
+        </ul>
+        <div class="nav-theme"></div>
+    </nav>
+
+    <section id="sec-home" class="home">
+        <img src="/img/Rock.png" alt="" onclick="zoomImage(this)">
+        <h1>September 9, 2022 - Starting at 8:00PM (EST)</h1>
+    </section>
+
+    <!-- Image Slideshow - Bards -->
+    <a name="bards"></a>
+    <section id="sec-bards" class="slideshow">
+        <div class="card">
+            <div class="card-text">
+                <h1 class="card-header">Highlander Misfits</h1>
+                <a href="#" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>   
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-img" style="background-image: url(../img/bards/beastles.jpg);"></div>
+        </div>
+        
+        <div class="card">
+            <div class="card-text">
+                <h1 class="card-header">The Beastles</h1>
+                <a href="https://beastles.carrd.co/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-img"></div>
+        </div>
+        
+        <div class="card">
+            <div class="card-text">
+                <h1 class="card-header">Black Rose</h1>
+                <a href="#" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-img" style="background-image: url(../img/bards/blackrose.png);"></div>
+        </div>
+        
+        <div class="card">
+            <div class="card-text">
+                <h1 class="card-header">The Wandering Bole</h1>
+                <a href="#" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-img"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-text">
+                <h1 class="card-header">The Ridiculously Noisy Bards</h1>
+                <a href="#" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-img"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-text">
+                <h1 class="card-header">A Special Performance</h1>
+                <a href="#" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-img"></div>
+        </div>
+    </section>
+
+    <!-- Event Details -->
+    <a name="events"></a>
+    <section id="sec-events" class="event">
+        <div class="event-text">
+            <div class="event-header">
+                <h1>Rock-a-bye Summer!</h1>
+                <p>« - Send off summer with style! - »</p>
+            </div>
+            <div class="event-body">
+                <div class="event-info">
+                    <h2>When?</h2>
+                    <p>September 9th, 2022 - starting @ 8PM EST</p>
+                </div>
+                <div class="event-info">
+                    <h2>Where?</h2>
+                    <p>Primal, Leviathan | Goblet | Ward 6, Plot 51</p>
+                </div>
+                <div class="event-info">
+                    <h2>How much?</h2>
+                    <p>Completely Free!</p>
+                </div>
+            </div>
+            <p class="event-footer">Let's Rock!</p>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <a name="menu"></a>
+    <section id="sec-events" class="menu">
+        <div class=""></div>
+    </section>
+
+    <!-- Section Transition -->
+    <section class="section-loader">
+        <div class="sec-screen"></div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
