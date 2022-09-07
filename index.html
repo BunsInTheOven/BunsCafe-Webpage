@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Rock-a-bye Summer 2022</title>
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
     <!-- Preview meta data -->
-    <meta property="og:title" content="Buns in the Oven - Rock-a-bye Summer 2022">
-    <meta property="og:description" content="Join us as we send off summer in style!">
+    <meta property="og:title" content="Rock-a-bye Summer 2022 - Rock concert">
+    <meta property="og:description" content="Buns in the Oven Café invites you to join us as we send off summer in style!">
     <meta property="og:url" content="tinyurl.com/bunscafe">
     <meta property="og:image" content="https://raw.githubusercontent.com/BunsInTheOven/BunsCafe-Webpage/main/img/Rock.jpg">
     <meta property="og:image:width" content="1620">
@@ -21,11 +24,13 @@
 
     <!-- Navigation -->
     <nav>
+        <span class="material-symbols-outlined">menu</span>
         <ul id="nav">
-            <li id="nav-home" class="active">Home</li>
+            <li id="nav-event" class="active">Event</li>
             <li id="nav-bards">Bards</li>
-            <li id="nav-events">Event</li>
-            <a href="https://discord.com/invite/HSa6unCSmH" target="_blank" rel="noopener noreferrer"><li id="nav-discord">Discord</li></a>
+            <li id="nav-details">Details</li>
+            <li id="nav-menu">Menu</li>
+            <li id="nav-discord"><a href="https://discord.com/invite/HSa6unCSmH" target="_blank" rel="noopener noreferrer"></a>Discord</a></li>
         </ul>
         <div class="nav-theme"></div>
     </nav>
@@ -40,53 +45,44 @@
     <section id="sec-bards" class="slideshow">
         <div class="card">
             <div class="card-text">
-                <h1 class="card-header">Highlander Misfits</h1>
-                <a href="#" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>   
-            </div>
-            <div class="card-overlay"></div>
-            <div class="card-img" style="background-image: url(../img/bards/beastles.jpg);"></div>
-        </div>
-        
-        <div class="card">
-            <div class="card-text">
-                <h1 class="card-header">The Beastles</h1>
-                <a href="https://beastles.carrd.co/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>
-            </div>
-            <div class="card-overlay"></div>
-            <div class="card-img"></div>
-        </div>
-        
-        <div class="card">
-            <div class="card-text">
                 <h1 class="card-header">Black Rose</h1>
-                <a href="#" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>
+                <a href="https://discord.gg/V6cdh7Zz" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Discord</a>
             </div>
             <div class="card-overlay"></div>
-            <div class="card-img" style="background-image: url(../img/bards/blackrose.png);"></div>
-        </div>
-        
-        <div class="card">
-            <div class="card-text">
-                <h1 class="card-header">The Wandering Bole</h1>
-                <a href="#" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>
-            </div>
-            <div class="card-overlay"></div>
-            <div class="card-img"></div>
+            <div class="card-img" style="background-image: url(../img/bards/blackrose.jpg);"></div>
         </div>
 
         <div class="card">
             <div class="card-text">
                 <h1 class="card-header">The Ridiculously Noisy Bards</h1>
-                <a href="#" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>
+                <a href="https://rnbxiv.carrd.co/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>
             </div>
             <div class="card-overlay"></div>
-            <div class="card-img"></div>
+            <div class="card-img" style="background-image: url(../img/bards/rnb.jpg);"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-text">
+                <h1 class="card-header">Highlander Misfits</h1>
+                <a href="https://highlander-misfits.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Website</a>   
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-img" style="background-image: url(../img/bards/highlandermisfit.jpg);"></div>
+        </div>
+        
+        <div class="card">
+            <div class="card-text">
+                <h1 class="card-header">The Wandering Bole</h1>
+                <a href="https://thewanderingbole.carrd.co/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-img" style="background-image: url(../img/bards/wanderingbole.jpg);"></div>
         </div>
 
         <div class="card">
             <div class="card-text">
                 <h1 class="card-header">A Special Performance</h1>
-                <a href="#" target="_blank" rel="noopener noreferrer" tabindex="-1" class="card-social">Carrd</a>
+                <p>Who could it be?</p>
             </div>
             <div class="card-overlay"></div>
             <div class="card-img"></div>
@@ -94,14 +90,14 @@
     </section>
 
     <!-- Event Details -->
-    <a name="events"></a>
+    <a name="details"></a>
     <section id="sec-events" class="event">
-        <div class="event-text">
-            <div class="event-header">
-                <h1>Rock-a-bye Summer!</h1>
-                <p>« - Send off summer with style! - »</p>
-            </div>
-            <div class="event-body">
+        <div class="event-header">
+            <h1>Rock-a-bye Summer!</h1>
+            <p>« - Send off summer with style! - »</p>
+        </div>
+        <div class="event-body">
+            <div class="event-details">
                 <div class="event-info">
                     <h2>When?</h2>
                     <p>September 9th, 2022 - starting @ 8PM EST</p>
@@ -115,14 +111,40 @@
                     <p>Completely Free!</p>
                 </div>
             </div>
-            <p class="event-footer">Let's Rock!</p>
+            <p>This special event will be theme around an <span>Indian Summer</span>.</p>
+            <p>You been invited to join Buns in the Oven Café as we say <span>"Rock-a-Bye"</span> to summer and make way to welcome in the fall season. We'll be hosting a rock concert on <span>September 9th</span> to make sure we're ushering in the new season with style!</p>
+            <p>This time we'd like to offer our deepest thanks to <span>Black Rose</span> for helping us gather our fantastic bard line-up.</p>
         </div>
+        <p class="event-footer">Let's Rock!</p>
     </section>
 
     <!-- Menu -->
     <a name="menu"></a>
-    <section id="sec-events" class="menu">
-        <div class=""></div>
+    <section id="sec-menu" class="menu">
+        <div class="menu-text">
+            <div class="menu-header">
+                <h1>Special Menu</h1>
+            </div>
+            <div class="menu-body">
+                <h2>Alcoholic</h2>
+                <ul>
+                    <li>Twisted Lemonade<p></p></li>
+                    <li>Spiced Cider</li>
+                    <li>Bloody Caeser</li>
+                    <li>Pixieberry Sunrise</li>
+                </ul>
+                <h2>Hot Drinks</h2>
+                <ul>
+                    <li>Espresso con Panna</li>
+                    <li>Matcha Latte</li>
+                    <li>Ishgardian Tea</li>
+                    <li>Hot Chocolate</li>
+                </ul>
+            </div>
+            <div class="menu-footer">
+                <p>Buns in the Oven Café does not endorse excessive drinking. <br> Please drink responsibly and enjoy!</p>
+            </div>
+        </div>
     </section>
 
     <!-- Section Transition -->
@@ -132,5 +154,14 @@
 
     <!-- Scripts -->
     <script src="js/scripts.js"></script>
+
+    <footer>
+        <p>Rock-a-bye Summer 2022 - Rock concert - September 9th @ 8:00 PM (EST)</p>
+        <p>Goblet | Ward 6 Plot 51 | Leviathan | Primal</p>
+        <h1>Hope to see you there!</h1>
+
+        <!-- If using the vector background art for menu -->
+        <a class="tiny" href="https://www.vectorstock.com/royalty-free-vector/christmas-silhouette-background-seamless-repeating-vector-35423707">Vector image by VectorStock / alexzel</a>
+    </footer>
 </body>
 </html>
